@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title data-i18n="page.contact">联系我们 - Flex Tech</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">Flex Tech</div>
+  <ul class="nav-menu">
+    <li><a href="index.html" data-i18n="nav.home"></a></li>
+    <li><a href="product.html" data-i18n="nav.product"></a></li>
+    <li><a href="about.html" data-i18n="nav.about"></a></li>
+    <li class="active"><a href="contact.html" data-i18n="nav.contact"></a></li>
+  </ul>
+  <div class="lang-switch">
+    <button class="lang-btn" id="btn-zh">中</button>
+    <button class="lang-btn" id="btn-en">En</button>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="section-title page-fade" data-i18n="contactTitle"></h2>
+  <p class="sub-title page-fade" data-i18n="contactSub"></p>
+
+  <div class="two-col page-fade">
+    <div class="box">
+      <h3 data-i18n="contactInfo"></h3>
+      <br>
+      <p data-i18n="contactTel"></p>
+      <br>
+      <p data-i18n="contactMail"></p>
+      <br>
+      <p data-i18n="contactAddr"></p>
+    </div>
+    <div class="box">
+      <h3 data-i18n="contactMsg"></h3>
+      <br>
+      <form id="msgForm">
+        <div class="form-group">
+          <label data-i18n="contactName"></label>
+          <input name="name" type="text" placeholder data-i18n="namePlaceholder">
+        </div>
+        <div class="form-group">
+          <label data-i18n="contactEmail"></label>
+          <input name="email" type="email" placeholder data-i18n="emailPlaceholder">
+        </div>
+        <div class="form-group">
+          <label data-i18n="contactContent"></label>
+          <textarea name="content" rows="4" placeholder data-i18n="msgPlaceholder"></textarea>
+        </div>
+        <button type="submit" class="submit-btn" data-i18n="submitBtn"></button>
+      </form>
+    </div>
+  </div>
+
+  <h2 class="section-title page-fade" style="margin-top:80px" data-i18n="faq"></h2>
+  <div class="accordion page-fade">
+    <div class="accordion-item">
+      <div class="accordion-header" data-i18n="faq1Q"></div>
+      <div class="accordion-body" data-i18n="faq1A"></div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" data-i18n="faq2Q"></div>
+      <div class="accordion-body" data-i18n="faq2A"></div>
+    </div>
+  </div>
+</div>
+
+<footer data-i18n="footer"></footer>
+<button class="back-top">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>
