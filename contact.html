@@ -1,77 +1,100 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title data-i18n="page.contact">联系我们 - Flex Tech</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.contact">联系我们</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="navbar">
-  <div class="logo">Flex Tech</div>
-  <ul class="nav-menu">
-    <li><a href="index.html" data-i18n="nav.home"></a></li>
-    <li><a href="product.html" data-i18n="nav.product"></a></li>
-    <li><a href="about.html" data-i18n="nav.about"></a></li>
-    <li class="active"><a href="contact.html" data-i18n="nav.contact"></a></li>
-  </ul>
-  <div class="lang-switch">
-    <button class="lang-btn" id="btn-zh">中</button>
-    <button class="lang-btn" id="btn-en">En</button>
+  <div class="nav-container">
+    <div class="logo">Flex Tech</div>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+      <li><a href="product.html" data-i18n="nav.product">产品</a></li>
+      <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">联系</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn" id="btn-zh">简</button>
+      <button class="lang-btn" id="btn-zh-tw">繁</button>
+    </div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
   </div>
 </div>
 
-<div class="container">
-  <h2 class="section-title page-fade" data-i18n="contactTitle"></h2>
-  <p class="sub-title page-fade" data-i18n="contactSub"></p>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+    <li><a href="product.html" data-i18n="nav.product">产品</a></li>
+    <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">联系</a></li>
+  </ul>
+  <div class="lang-switch">
+    <button class="lang-btn" id="mobile-zh">简</button>
+    <button class="lang-btn" id="mobile-zh-tw">繁</button>
+  </div>
+</div>
 
-  <div class="two-col page-fade">
-    <div class="box">
-      <h3 data-i18n="contactInfo"></h3>
-      <br>
-      <p data-i18n="contactTel"></p>
-      <br>
-      <p data-i18n="contactMail"></p>
-      <br>
-      <p data-i18n="contactAddr"></p>
+<section class="page-head">
+  <div class="container">
+    <h1 data-i18n="contactTitle">联系我们</h1>
+    <p data-i18n="contactSub">欢迎咨询，我们将第一时间为您服务</p>
+  </div>
+</section>
+
+<section class="contact-wrap">
+  <div class="container">
+    <div class="contact-left">
+      <h3 data-i18n="contactInfo">联系方式</h3>
+      <p data-i18n="contactTel">📞 电话：400-123-4567</p>
+      <p data-i18n="contactMail">📧 邮箱：service@flextech.com</p>
+      <p data-i18n="contactAddr">📍 地址：北京市海淀区中关村科技园区</p>
     </div>
-    <div class="box">
-      <h3 data-i18n="contactMsg"></h3>
-      <br>
+    <div class="contact-right">
+      <h3 data-i18n="contactMsg">在线留言</h3>
       <form id="msgForm">
-        <div class="form-group">
-          <label data-i18n="contactName"></label>
-          <input name="name" type="text" placeholder data-i18n="namePlaceholder">
+        <div class="form-item">
+          <label data-i18n="contactName">您的姓名</label>
+          <input type="text" name="name" data-i18n="namePlaceholder">
         </div>
-        <div class="form-group">
-          <label data-i18n="contactEmail"></label>
-          <input name="email" type="email" placeholder data-i18n="emailPlaceholder">
+        <div class="form-item">
+          <label data-i18n="contactEmail">联系邮箱</label>
+          <input type="email" name="email" data-i18n="emailPlaceholder">
         </div>
-        <div class="form-group">
-          <label data-i18n="contactContent"></label>
-          <textarea name="content" rows="4" placeholder data-i18n="msgPlaceholder"></textarea>
+        <div class="form-item">
+          <label data-i18n="contactContent">留言内容</label>
+          <textarea name="content" data-i18n="msgPlaceholder"></textarea>
         </div>
-        <button type="submit" class="submit-btn" data-i18n="submitBtn"></button>
+        <button type="submit" class="submit-btn" data-i18n="submitBtn">提交留言</button>
       </form>
     </div>
   </div>
+</section>
 
-  <h2 class="section-title page-fade" style="margin-top:80px" data-i18n="faq"></h2>
-  <div class="accordion page-fade">
-    <div class="accordion-item">
-      <div class="accordion-header" data-i18n="faq1Q"></div>
-      <div class="accordion-body" data-i18n="faq1A"></div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header" data-i18n="faq2Q"></div>
-      <div class="accordion-body" data-i18n="faq2A"></div>
+<section class="faq">
+  <div class="container">
+    <h3 data-i18n="faq">常见问题</h3>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header" data-i18n="faq1Q">如何进行项目合作？</div>
+        <div class="accordion-body" data-i18n="faq1A">联系我们并说明需求，我们将提供方案、报价、开发、测试、上线全流程服务。</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" data-i18n="faq2Q">毕业设计可以定制吗？</div>
+        <div class="accordion-body" data-i18n="faq2A">可以，我们支持定制前端页面、交互效果、论文配套项目，完全满足学校要求。</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<footer data-i18n="footer"></footer>
-<button class="back-top">↑</button>
+<footer>
+  <p data-i18n="footer">©2026 Flex Tech 专业前端平台</p>
+</footer>
+
+<div class="back-top">↑</div>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,82 +1,123 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title data-i18n="page.home">首页 - Flex Tech</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Tech - 现代化前端开发平台</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- 导航栏 -->
 <div class="navbar">
-  <div class="logo">Flex Tech</div>
-  <ul class="nav-menu">
-    <li class="active"><a href="index.html" data-i18n="nav.home"></a></li>
-    <li><a href="product.html" data-i18n="nav.product"></a></li>
-    <li><a href="about.html" data-i18n="nav.about"></a></li>
-    <li><a href="contact.html" data-i18n="nav.contact"></a></li>
+  <div class="nav-container">
+    <div class="logo">Flex Tech</div>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+      <li><a href="product.html" data-i18n="nav.product">产品</a></li>
+      <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">联系</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn" id="btn-zh">简</button>
+      <button class="lang-btn" id="btn-zh-tw">繁</button>
+    </div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </div>
+</div>
+
+<!-- 移动端菜单 -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+    <li><a href="product.html" data-i18n="nav.product">产品</a></li>
+    <li><a href="about.html" data-i18n="nav.about">关于</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">联系</a></li>
   </ul>
   <div class="lang-switch">
-    <button class="lang-btn" id="btn-zh">中</button>
-    <button class="lang-btn" id="btn-en">En</button>
+    <button class="lang-btn" id="mobile-zh">简</button>
+    <button class="lang-btn" id="mobile-zh-tw">繁</button>
   </div>
 </div>
 
-<div class="container">
-  <div class="hero page-fade">
-    <div class="hero-text">
-      <h1 data-i18n="heroTitle"></h1>
-      <p data-i18n="heroText"></p>
-      <button class="hero-btn" data-i18n="heroBtn"></button>
-    </div>
-    <div class="hero-img"></div>
+<!-- 英雄区 -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 data-i18n="heroTitle">现代化前端开发平台</h1>
+    <p data-i18n="heroText">专注响应式布局、高级动画、交互设计、全端适配，为您打造专业级网站项目。</p>
+    <a href="product.html" class="hero-btn" data-i18n="heroBtn">了解更多</a>
   </div>
+</section>
 
-  <h2 class="section-title page-fade" data-i18n="service"></h2>
-  <p class="sub-title page-fade" data-i18n="serviceSub"></p>
-  <div class="card-group page-fade">
-    <div class="card">
-      <h3 data-i18n="card1Title"></h3>
-      <p data-i18n="card1Desc"></p>
+<!-- 服务 -->
+<section class="service">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-i18n="service">核心服务</h2>
+      <p data-i18n="serviceSub">全方位前端解决方案</p>
     </div>
-    <div class="card">
-      <h3 data-i18n="card2Title"></h3>
-      <p data-i18n="card2Desc"></p>
-    </div>
-    <div class="card">
-      <h3 data-i18n="card3Title"></h3>
-      <p data-i18n="card3Desc"></p>
-    </div>
-    <div class="card">
-      <h3 data-i18n="card4Title"></h3>
-      <p data-i18n="card4Desc"></p>
-    </div>
-  </div>
-
-  <h2 class="section-title page-fade" style="margin-top:80px" data-i18n="tech"></h2>
-  <div class="two-col page-fade">
-    <div class="box">
-      <h3 data-i18n="tech1"></h3>
-      <br>
-      <p data-i18n="tech1Desc"></p>
-    </div>
-    <div class="box">
-      <h3 data-i18n="tech2"></h3>
-      <br>
-      <p data-i18n="tech2Desc"></p>
+    <div class="service-card-wrap">
+      <div class="card">
+        <h3 data-i18n="card1Title">响应式开发</h3>
+        <p data-i18n="card1Desc">全设备适配，Flex/Grid布局，完美兼容各种屏幕。</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="card2Title">高级动画</h3>
+        <p data-i18n="card2Desc">滚动渐入、3D旋转、流光效果，提升视觉体验。</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="card3Title">交互优化</h3>
+        <p data-i18n="card3Desc">鼠标跟随、表单验证、TAB切换，增强用户体验。</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="card4Title">项目部署</h3>
+        <p data-i18n="card4Desc">一站式开发、测试、上线维护，全程无忧。</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <h2 class="section-title page-fade" style="margin-top:80px" data-i18n="slider"></h2>
-  <div class="slider page-fade">
-    <div class="slide-item active" style="background:#3b82f6" data-i18n="slide1"></div>
-    <div class="slide-item" style="background:#8b5cf6" data-i18n="slide2"></div>
-    <div class="slide-item" style="background:#ef4444" data-i18n="slide3"></div>
+<!-- 技术 -->
+<section class="tech">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-i18n="tech">技术优势</h2>
+    </div>
+    <div class="tech-content">
+      <div class="tech-item">
+        <h4 data-i18n="tech1">前沿技术栈</h4>
+        <p data-i18n="tech1Desc">HTML5、CSS3、JavaScript、Flex、Grid、动画系统、模块化开发。</p>
+      </div>
+      <div class="tech-item">
+        <h4 data-i18n="tech2">项目经验</h4>
+        <p data-i18n="tech2Desc">多年企业官网、电商平台、管理系统、毕业设计项目开发经验。</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<footer data-i18n="footer"></footer>
-<button class="back-top">↑</button>
+<!-- 轮播 -->
+<section class="slider-section">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-i18n="slider">项目轮播</h2>
+    </div>
+    <div class="slider">
+      <div class="slide-item active" data-i18n="slide1">企业官网项目</div>
+      <div class="slide-item" data-i18n="slide2">电商平台项目</div>
+      <div class="slide-item" data-i18n="slide3">毕业设计项目</div>
+    </div>
+  </div>
+</section>
+
+<!-- 底部 -->
+<footer>
+  <p data-i18n="footer">©2026 Flex Tech 专业前端平台</p>
+</footer>
+
+<!-- 返回顶部 -->
+<div class="back-top">↑</div>
+
 <script src="js/script.js"></script>
 </body>
 </html>
